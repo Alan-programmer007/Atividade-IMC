@@ -2,10 +2,10 @@ body{
     background-color: rgba(62, 62, 62, 1);
 }
 
-#main {
+#main{
     position: relative;
-    top: 20px;
-    border-radius: 5px;
+    top: 30px;
+    border-radius: 8px;
 }
 
 #main, #resultado{
@@ -14,6 +14,21 @@ body{
     padding: 20px;
     margin: auto;
     background-color: rgba(120, 120, 120, 1);
+}
+
+#mostra{   
+    position: relative;
+    top: 100px;
+    width: 200px;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    background-color: rgba(120, 120, 120, 1);
+    border-radius: 8px;
+}
+
+#mostra p{
+    display: block;
 }
 
 input, button{

@@ -48,16 +48,24 @@ calcular.addEventListener('click', ()=>{
     const inputAltura = Number(document.querySelector("#altura").value)
     const inputPeso = Number(document.querySelector("#peso").value)
 
-    if(inputAltura == "" || inputPeso == ""){
-        alert("Digite os dois valor!!")
-    }else{
-        const imc = inputPeso/(inputAltura*inputAltura)
+    if(inputAltura == "" || inputPeso == "")
+        return alert("Digite os dois valor!!")
 
+        const imc = inputPeso/(inputAltura*inputAltura)
         const imcUsar = imc.toFixed(2)
 
-        const resultado = document.querySelector("h2")
-        resultado.innerText = `IMC = ${imcUsar}`
-
-        
-    }
+        novoIMC(imcUsar)
+    
+        document.querySelector("#altura").value = ""
+        document.querySelector("#peso").value = ""
+    
 })
+
+function novoIMC(imcUsar){
+    mostra.classList.remove("hiden")
+
+    const result = document.createElement("p");
+    const saida = document.createTextNode("IMC = " + imcUsar);
+    result.appendChild(saida);
+    document.getElementById("mostra").appendChild(result)
+}
